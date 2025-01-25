@@ -18,6 +18,7 @@
   },
   "homepage": "https://amon-mr-error.github.io/Insurance-Analytics/",
   "scripts": {
+    "postcss": "postcss src/styles.css -o public/styles.css",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",

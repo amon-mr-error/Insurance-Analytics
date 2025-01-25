@@ -1,0 +1,124 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-white p-5 rounded-lg shadow col-span-2{
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+ 
+  
+  @media (min-width: 640px) {
+    .pie-chart-container {
+      max-width: 500px; /* Set max-width for medium and large screens */
+    }
+  }
+
+/* Base Styles */
+body {
+  @apply bg-gray-50 text-gray-800 font-sans;
+}
+
+/* Layout */
+.dashboard-container {
+  @apply flex flex-col md:flex-row;
+}
+
+.sidebar {
+  @apply w-full md:w-64 bg-white border-b md:border-r p-4;
+}
+
+.main-content {
+  @apply flex-1 p-4 md:p-6 overflow-y-auto;
+}
+
+/* Navigation */
+.nav-tabs {
+  @apply flex flex-row md:flex-col overflow-x-auto;
+}
+
+.nav-tab {
+  @apply p-3 flex-shrink-0 cursor-pointer hover:bg-gray-100;
+}
+
+/* Tables */
+.responsive-table {
+  @apply w-full block overflow-x-auto;
+}
+
+.responsive-table thead {
+  @apply hidden md:table-header-group;
+}
+
+.responsive-table tr {
+  @apply block md:table-row border-b mb-2;
+}
+
+.responsive-table td {
+  @apply block md:table-cell p-2 text-right md:text-left;
+}
+
+.responsive-table td::before {
+  @apply md:hidden font-bold mr-2;
+  content: attr(data-label);
+}
+
+/* Grid */
+.dashboard-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4;
+}
+
+/* Charts */
+.chart-container {
+  @apply w-full overflow-x-auto;
+}
+
+/* Inputs & Buttons */
+.mobile-input {
+  @apply w-full p-2 text-sm rounded-md border;
+}
+
+.mobile-button {
+  @apply w-full md:w-auto p-2 rounded-md;
+}
+
+/* Typography */
+h1 {
+  @apply text-xl md:text-2xl;
+}
+
+h2 {
+  @apply text-lg md:text-xl;
+}
+
+/* Visibility */
+.mobile-hidden {
+  @apply hidden md:block;
+}
+
+.desktop-hidden {
+  @apply block md:hidden;
+}
+
+/* Media Queries */
+@media (max-width: 640px) {
+  .sidebar {
+    @apply fixed z-50 bottom-0 left-0 right-0 bg-white shadow-lg;
+  }
+
+  .main-content {
+    @apply pb-16; /* Space for fixed bottom navigation */
+  }
+}
+
+@media (min-width: 768px) {
+  .sidebar {
+    @apply relative;
+  }
+}
+
+/* In index.css or App.css */
+
+
+  
