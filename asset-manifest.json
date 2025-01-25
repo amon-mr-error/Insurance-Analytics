@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Insurance-Analytics/static/css/main.7e77533d.css",
+    "main.js": "/Insurance-Analytics/static/js/main.919a1116.js",
+    "static/js/453.8217a061.chunk.js": "/Insurance-Analytics/static/js/453.8217a061.chunk.js",
+    "index.html": "/Insurance-Analytics/index.html",
+    "main.7e77533d.css.map": "/Insurance-Analytics/static/css/main.7e77533d.css.map",
+    "main.919a1116.js.map": "/Insurance-Analytics/static/js/main.919a1116.js.map",
+    "453.8217a061.chunk.js.map": "/Insurance-Analytics/static/js/453.8217a061.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7e77533d.css",
+    "static/js/main.919a1116.js"
+  ]
+}
