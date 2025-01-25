@@ -2,51 +2,104 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Base Responsive Styles */
 body {
   @apply bg-gray-50 text-gray-800 font-sans;
 }
 
-/* Scrollbar */
-::-webkit-scrollbar {
-  @apply w-2 bg-transparent;
+/* Mobile-First Responsive Design */
+.dashboard-container {
+  @apply flex flex-col md:flex-row;
 }
 
-::-webkit-scrollbar-thumb {
-  @apply bg-blue-300 rounded-full;
+.sidebar {
+  @apply w-full md:w-64 bg-white border-b md:border-r p-4;
 }
 
-/* Table Styles */
-.table-row {
-  @apply hover:bg-blue-50 transition-colors cursor-pointer;
+.main-content {
+  @apply flex-1 p-2 md:p-6 overflow-y-auto;
 }
 
-.risk-badge {
-  @apply px-2 py-1 rounded-full text-xs font-medium;
+/* Responsive Navigation */
+.nav-tabs {
+  @apply flex flex-row md:flex-col overflow-x-auto;
 }
 
-.risk-low {
-  @apply bg-green-100 text-green-800;
+.nav-tab {
+  @apply p-3 flex-shrink-0 cursor-pointer hover:bg-gray-100;
 }
 
-.risk-medium {
-  @apply bg-yellow-100 text-yellow-800;
+/* Responsive Tables */
+.responsive-table {
+  @apply w-full block overflow-x-auto;
 }
 
-.risk-high {
-  @apply bg-red-100 text-red-800;
+.responsive-table thead {
+  @apply hidden md:table-header-group;
 }
 
-/* Card Styles */
-.dashboard-card {
-  @apply bg-white rounded-lg shadow-md p-4 hover:shadow-lg transition-shadow;
+.responsive-table tr {
+  @apply block md:table-row border-b mb-2;
 }
 
-/* Button Styles */
-.btn-primary {
-  @apply bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600;
+.responsive-table td {
+  @apply block md:table-cell p-2 text-right md:text-left;
 }
 
-/* Chart Overlay */
-.chart-overlay {
-  @apply absolute inset-0 bg-gray-200 bg-opacity-50 flex items-center justify-center;
+.responsive-table td::before {
+  @apply md:hidden font-bold mr-2 content-[attr(data-label)];
+}
+
+/* Responsive Grid */
+.dashboard-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4;
+}
+
+/* Responsive Charts */
+.chart-container {
+  @apply w-full overflow-x-auto;
+}
+
+/* Mobile-Specific Input & Button Styles */
+.mobile-input {
+  @apply w-full p-2 text-sm rounded-md border;
+}
+
+.mobile-button {
+  @apply w-full md:w-auto p-2 rounded-md;
+}
+
+/* Responsive Typography */
+h1 {
+  @apply text-xl md:text-2xl;
+}
+
+h2 {
+  @apply text-lg md:text-xl;
+}
+
+/* Responsive Visibility */
+.mobile-hidden {
+  @apply hidden md:block;
+}
+
+.desktop-hidden {
+  @apply block md:hidden;
+}
+
+/* Media Queries for Fine-Tuning */
+@media (max-width: 640px) {
+  .sidebar {
+    @apply fixed z-50 bottom-0 left-0 right-0;
+  }
+
+  .main-content {
+    @apply pb-16; /* Space for bottom navigation */
+  }
+}
+
+@media (min-width: 768px) {
+  .sidebar {
+    @apply relative;
+  }
 }
